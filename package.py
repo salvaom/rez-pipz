@@ -1,6 +1,7 @@
+import sys
 name = "pipz"
 version = "1.1.10"
-requires = ["bleeding_rez-2.29+", "python>=2,<4"]
+requires = ["rez-2.29+", "python>=2,<4"]
 
 tools = [
     "install",
@@ -9,7 +10,7 @@ tools = [
 
 # Upon a new release of pip, wheel or setuptools, this is what you edit
 build_command = " ".join([
-    "python {root}/install.py ",
+    sys.executable, "{root}/install.py ",
     "--pip=19.1.1",
     "--wheel=0.33.4",
     "--setuptools=41.0.1",
